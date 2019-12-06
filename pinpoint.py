@@ -53,3 +53,9 @@ class Pinpoint:
         else:
             print (json.dumps(response))
         return response
+    
+    def get_endpoint(self, endpoint_id):
+        response = self.client.get_endpoint(
+            ApplicationId = self.application_id, 
+            EndpointId = endpoint_id)
+        return response
