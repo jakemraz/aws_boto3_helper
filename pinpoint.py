@@ -27,7 +27,7 @@ class Pinpoint:
     def create_campaign(self, title, message, segment_id, icon_url, image_url):
         try:
             response = self.client.create_campaign(
-                ApplicationId=application_id,
+                ApplicationId=self.application_id,
                 WriteCampaignRequest={
                     'MessageConfiguration': {
                         'DefaultMessage': {
